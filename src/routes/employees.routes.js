@@ -1,25 +1,25 @@
 import { Router } from "express";
 import {
-  createEmployee,
-  deleteEmployee,
-  getEmployee,
-  getEmployees,
+  createUser,
+  deleteUser,
+  getUser,
+  getUsers,
   updateEmployee,
 } from "../controllers/employees.controller.js";
 
 const router = Router();
 
-// GET all Employees
-router.get("/employees", getEmployees);
+// GET all Users
+router.get("/usuarios", getUsers);
 
-// GET An Employee
-router.get("/employees/:id", getEmployee);
+// GET An User
+router.get("/usuario/:documentNumber", getUser);
 
 // DELETE An Employee
-router.delete("/employees/:id", deleteEmployee);
+router.delete("/usuario/:documentNumber", deleteUser);
 
 // INSERT An Employee
-router.post("/employees", createEmployee);
+router.post("/usuario", createUser);
 
 router.patch("/employees/:id", updateEmployee);
 
